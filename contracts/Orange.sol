@@ -9,6 +9,8 @@ contract Orange {
         uint64 skillId;
         // uint64 employeeId;
 
+        uint64 managerId;
+
         // track could be: learning, experience
         string track;
         // learning - course details
@@ -30,6 +32,7 @@ contract Orange {
     function addSkill(
         uint64 empid,
         uint64 skillId,
+        uint64 managerId,
         string memory track,
         string memory trackDetails,
         uint8 proficieny,
@@ -43,6 +46,7 @@ contract Orange {
             AcquiredSkill(
                 true,
                 skillId,
+                managerId,
                 track,
                 trackDetails,
                 proficieny,
